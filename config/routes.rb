@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-  get 'registrations/new'
-  get 'registrations/create'
   root to: 'main#index'
+  delete "logout", to: 'sessions#destroy'
   get "sign_up", to: "registrations#new"
   post "sign_up", to: "registrations#create"
   get 'about-us', to: "about#index", as: :about
