@@ -10,5 +10,8 @@ Rails.application.routes.draw do
   delete "logout", to: 'sessions#destroy'
 
   get 'about-us', to: "about#index", as: :about
+
+  resources :password, only: [:edit, :update]
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
